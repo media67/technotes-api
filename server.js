@@ -6,8 +6,8 @@ const path = require("path");
 const { logger, logEvents } = require("./middleware/logger");
 const errorHandler = require("./middleware/errorHandler");
 const cookieParser = require("cookie-parser");
-// const cors = require("cors");
-// const corsOptions = require("./config/corsOptions");
+const cors = require("cors");
+const corsOptions = require("./config/corsOptions");
 const connectDB = require("./config/dbConn");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3500;
@@ -18,7 +18,7 @@ connectDB();
 app.use(logger);
 
 //cross origin resource sharing (this is a third party middeware)
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 //allow our app receive and parse JSON data (this is a built-in middleware)
 app.use(express.json());
