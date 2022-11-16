@@ -1,0 +1,20 @@
+- have node and npm installed
+- npm init
+- npm i express
+- npm i nodemon -D (for dev only)
+- server.js
+- routes > root.js (to send index.html file)
+- public > styles > styles.css (adds style to pages in views folder)
+- views > index.html && 404.html (pages to be served for '/' and '404' routes)
+- logs and middleware folders
+- npm i date-fns uuid (used for custom middleware)
+- .gitignore (node_modules, logs)
+- logger.js
+- npm i cookie-parser
+- npm i cors
+- npm i dotenv (lets us use environment variable inside our REST api.)
+- Mongodb -> techNotes > techNotesDB > users
+- username: district67 password: techNotes1234
+- npm i mongoose
+- npm i mongoose-sequence
+- npm i express-async-handler bcrypt
